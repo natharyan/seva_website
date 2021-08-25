@@ -263,15 +263,7 @@ a:focus {
     padding-bottom: 5px;
 }
 
-.page-header h2::after {
-    position: absolute;
-    content: "";
-    width: 100px;
-    height: 2px;
-    left: calc(50% - 50px);
-    bottom: 0;
-    background: #FDBE33;
-}
+
 
 .page-header a {
     position: relative;
@@ -638,7 +630,7 @@ a:focus {
 .team .team-text {
     position: absolute;
     width: calc(100% - 40px);
-    height: 96px;
+    height: 90px;
     bottom: 0;
     left: 20px;
     padding: 22px 0;
