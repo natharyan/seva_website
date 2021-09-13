@@ -1170,3 +1170,7 @@ a:focus {
     }
     
    }
+
+   .pagination{
+       text-align: center;
+   }
