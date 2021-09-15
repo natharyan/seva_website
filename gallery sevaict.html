@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gallery: SBS Seva</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(img/factsbg.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #gallery {
+            padding-top: 40px;
+        }
+
+        @media screen and (min-width: 991px) {
+            #gallery {
+                padding: 60px 30px 0 30px;
+            }
+        }
+
+        .img-wrapper {
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .img-wrapper img {
+            width: 270px;
+            height: 200px;
+        }
+
+        .img-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+        }
+
+        .img-overlay i {
+            color: #fff;
+            font-size: 3em;
+        }
+
+        #overlay {
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #overlay img {
+            margin: 0;
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            padding: 5%;
+        }
+
+        @media screen and (min-width: 768px) {
+            #overlay img {
+                width: 60%;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            #overlay img {
+                width: 50%;
+            }
+        }
+
+        #nextButton {
+            color: #fff;
+            font-size: 2em;
+            transition: opacity 0.8s;
+        }
+
+        #nextButton:hover {
+            opacity: 0.7;
+        }
+
+        @media screen and (min-width: 768px) {
+            #nextButton {
+                font-size: 3em;
+            }
+        }
+
+        #prevButton {
+            color: #fff;
+            font-size: 2em;
+            transition: opacity 0.8s;
+        }
+
+        #prevButton:hover {
+            opacity: 0.7;
+        }
+
+        @media screen and (min-width: 768px) {
+            #prevButton {
+                font-size: 3em;
+            }
+        }
+
+        #exitButton {
+            color: #fff;
+            font-size: 2em;
+            transition: opacity 0.8s;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        #exitButton:hover {
+            opacity: 0.7;
+        }
+
+        @media screen and (min-width: 768px) {
+            #exitButton {
+                font-size: 3em;
+            }
+        }
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">SBS Seva</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="gallery prayas.html" class="nav-item nav-link active">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Gallery</h2>
+                    <h3 style="color: #FDBE33;">Seva Prayaas</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Pagination-->
+    <div class="pagination">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h3><a href="gallery prayas.html">Seva Prayas</a></h3>
+                </div>
+                <div class="col-6">
+                    <h3><a href="gallery sevaict.html">Seva ICT</a></h3>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;justify-content: center;">
+                <a href="ict videos.html">
+                <button class="button">
+                    Videos
+                    <div class="button__horizontal"></div>
+                    <div class="button__vertical"></div>
+                </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Pagination end -->
+
+    <br><br><br>
+    <div class="row"> 
+        <div class="column">
+          <img src="img/Seva ICT/3.jpg" style="width:100%">
+          <img src="img/Seva ICT/4.jpg" style="width:100%">
+          <img src="img/Seva ICT/5.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="img/Seva ICT/6.jpg" style="width:100%">
+          <img src="img/Seva ICT/7.jpg" style="width:100%">
+          <img src="img/Seva ICT/9.jpg" style="width:100%">
+        </div>  
+        <div class="column">
+          <img src="img/Seva ICT/10.jpg" style="width:100%">
+          <img src="img/Seva ICT/18.jpg" style="width:100%">
+          <img src="img/Seva ICT/21.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="img/Seva ICT/27.jpg" style="width:100%">
+          <img src="img/Seva ICT/33.jpg" style="width:100%">
+        </div>
+      </div>
+      <br><br><br>
+      <button class="button">
+        Videos
+        <div class="button__horizontal"></div>
+        <div class="button__vertical"></div>
+    </button>
+
+
+    <!-- Footer Start -->
+    <footer id="footer" class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>SBS Seva</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                ·
+                <a href="about.html">About</a>
+                ·
+                <a href="gallery prayas.html">Gallery</a>
+            </p>
+
+            <p class="footer-company-name">&copy; SBS Seva</p>
+            <p class="footer-company-name">Designed and Developed by Aryan Nath and Shauryaveer Chaudhry</p>
+        </div>
+
+        <div class="footer-center">
+            <p style="text-align: center;">All interested students may contact <br>the following email id:</p>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p style="text-align: center;"><a href="mailto:sbs.seva2021@gmail.com">sbs.seva2021@gmail.com</a></p>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+        <div class="loader"></div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
