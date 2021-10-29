@@ -33,6 +33,184 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Lobster&family=Bebas+Neue&display=swap');
+
+        .news-heading {
+            text-align: center;
+            margin-top: 45px;
+            font-family: 'Bebas Neue', cursive;
+            color: white;
+            font-size: 50px;
+        }
+
+        .tooltip,
+        .container__sources:before,
+        .container__build:before,
+        .container__deploy:before {
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            color: #fff;
+            background: #61ff7e;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2.5px 2.5px 0px 0px;
+        }
+
+        .containerflow .card,
+        .container__sources div,
+        .container__build div {
+            line-height: 2;
+            background: #fff;
+            padding: 1.2rem 1rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px #e6e6e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .containerflow {
+            margin: 5vh 2.5vw;
+            padding: 1vh 0;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-family: 'Mukta', sans-serif;
+            color: #0B0033;
+        }
+
+        .containerflow svg {
+            height: 5rem;
+        }
+
+        .containerflow svg line {
+            stroke: #ffc355;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            stroke-dasharray: 2px 20px;
+            animation: animateline 5s linear both infinite;
+        }
+
+        .containerflow h3 {
+            font-size: 1.1rem;
+            color: 0B0033;
+        }
+
+        .containerflowp {
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .container__sources {
+            display: flex;
+            border-radius: 8px 0px 8px 8px;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            position: relative;
+        }
+        /*
+        .container__sources:before {
+            content: 'date';
+        }
+        */
+        .container__sources div {
+            text-align: left;
+            margin: 0 1rem;
+        }
+
+        .container__build {
+            padding: 10vh 10vw;
+            border-radius: 8px;
+            background: #f9f9f9;
+            position: relative;
+        }
+
+        .container__build:before {
+            content: 'build';
+        }
+
+        .container__build div {
+            margin: 2rem 0;
+        }
+
+        .container__build div svg {
+            width: 4rem;
+            height: auto;
+            fill: #05ffff;
+        }
+
+        .container__deploy {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .container__deploy:before {
+            content: 'date';
+        }
+
+        @media (max-width: 700px) {
+            .container__sources {
+                flex-direction: column;
+            }
+
+            .container__sources div {
+                margin: 1rem 0;
+            }
+
+            .skew-menu ul li a {
+                padding: 1em 1em;
+            }
+        }
+
+        @-moz-keyframes animateline {
+            from {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -5rem;
+            }
+        }
+
+        @-webkit-keyframes animateline {
+            from {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -5rem;
+            }
+        }
+
+        @-o-keyframes animateline {
+            from {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -5rem;
+            }
+        }
+
+        @keyframes animateline {
+            from {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -5rem;
+            }
+        }
     </style>
 </head>
 
@@ -49,7 +227,7 @@
                 <div class="navbar-nav ml-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link active">About</a>
-                    <a href="gallery prayas.html" class="nav-item nav-link">Gallery</a>
+                    <a href="gallery praayas.html" class="nav-item nav-link">Gallery</a>
                 </div>
             </div>
         </div>
@@ -95,27 +273,80 @@
                         <div class="tab-content">
                             <div id="tab-content-1" class="container tab-pane active">
                                 <ul>
-                                    <li>To <span style="font-weight: bold;">foster</span> amongst students the <span style="font-weight: bold;">will</span> to connect with their peers, their elders, the
+                                    <li>To <span style="font-weight: bold;">foster</span> amongst students the <span
+                                            style="font-weight: bold;">will</span> to connect with their peers, their
+                                        elders, the
                                         community and the environment.</li>
-                                    <li>To provide a platform to <span style="font-weight: bold;">learn and grow</span></li>
-                                    <li>To encourage the youth to be <span style="font-weight: bold;">active citizens</span> that wish to make a change by <span style="font-weight: bold;">applying
-                                        their skills to social problems</span></li>
-                                    <li>To provide <span style="font-weight: bold;">support, information, and hope</span> to underprivileged communities</li>
-                                    <li>To <span style="font-weight: bold;">assist</span> and <span style="font-weight: bold;">collaborate</span> with <span style="font-weight: bold;">various organizations</span> working towards our <span style="font-weight: bold;">common
-                                        goal.</span></li>
-                                    <li>To contribute by <span style="font-weight: bold;">fundraising</span> for the underprivileged section of society</li>
-                                    <li>To use <span style="font-weight: bold;">education as an effective tool</span> to achieve our vision</li>
+                                    <li>To provide a platform to <span style="font-weight: bold;">learn and grow</span>
+                                    </li>
+                                    <li>To encourage the youth to be <span style="font-weight: bold;">active
+                                            citizens</span> that wish to make a change by <span
+                                            style="font-weight: bold;">applying
+                                            their skills to social problems</span></li>
+                                    <li>To provide <span style="font-weight: bold;">support, information, and
+                                            hope</span> to underprivileged communities</li>
+                                    <li>To <span style="font-weight: bold;">assist</span> and <span
+                                            style="font-weight: bold;">collaborate</span> with <span
+                                            style="font-weight: bold;">various organizations</span> working towards our
+                                        <span style="font-weight: bold;">common
+                                            goal.</span></li>
+                                    <li>To contribute by <span style="font-weight: bold;">fundraising</span> for the
+                                        underprivileged section of society</li>
+                                    <li>To use <span style="font-weight: bold;">education as an effective tool</span> to
+                                        achieve our vision</li>
                                 </ul>
                             </div>
                             <div id="tab-content-2" class="container tab-pane fade">
-                                Seva ICT- Started with Dr. Ruhi Foundation School 2015, moved to online platform 2020
-                                Seva Prayaas- Started with Shahpur Prathmik Vidyalaya 2016, moved to online 2020, got
-                                Dr. Ruhi Foundation School also into fold 2021<br><br><br><br><br><br><br><br><br><br><br>
+                                <section class="containerflow">
+
+                                    <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
+                                    <div class="container__sources">
+
+                                        <div>
+                                            <h3>2015</h3>
+                                            <p><span style="font-weight: bold;">SEVA ICT </span> ESTABLISHED IN PARTNERSHIP WITH DR. RUHI FOUNDATION SCHOOL</p>
+                                        </div>
+                                        <div>
+                                            <h3>2016</h3>
+                                            <p><span style="font-weight: bold;">SEVA PRAYAAS </span> ESTABLISHED IN PARTNERSHIP WITH SHAHPUR PRATHMIK VIDYALAYA</p>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- include a simple line to divide the container, and animate it to show a connection between the different containers  -->
+                                    <svg viewbox="0 0 10 100">
+                                        <line x1="5" x2="5" y1="0" y2="100" />
+                                    </svg>
+
+                                    <div class="container__sources">
+
+                                        <div>
+                                            <h3>2020</h3>
+                                            <p><span style="font-weight: bold;">SEVA PRAYAS & ICT </span>MOVED ONLINE</p>
+                                        </div>
+
+                                    </div>
+
+                                    <svg viewbox="0 0 10 100">
+                                        <line x1="5" x2="5" y1="0" y2="100" />
+                                    </svg>
+
+                                    <div class="container__sources">
+
+                                        <div>
+                                            <h3>2021</h3>
+                                            <p><span style="font-weight: bold;">SEVA PRAYAS </span>PARTNERED WITH DR. RUHI FOUNDATION SCHOOL</p>
+                                        </div>
+
+                                    </div>
+
+                                </section>
                             </div>
                             <div id="tab-content-3" class="container tab-pane fade">
                                 We dream of a day each individual will embrace the upliftment of the community as a
                                 personal responsibility. This is a humble attempt to offer support to underprivileged
-                                communities whole learning, growing and finding a purpose as a student.<br><br><br><br><br><br><br><br><br><br>
+                                communities whole learning, growing and finding a purpose as a
+                                student.<br><br><br><br><br><br><br><br><br><br>
                             </div>
                         </div>
                     </div>
@@ -128,7 +359,7 @@
     <!-- Team Start -->
     <div class="team">
         <div class="container">
-            
+
             <div class="section-header text-center">
                 <h2>The Team</h2>
             </div>
@@ -163,11 +394,11 @@
                 <p style="color: black;">Student Coordinators</p>
             </div>
             <div class="row">
-                
+
                 <div class="col-lg-3 col-md-6">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="img/parnika.jpeg" alt="Team Image"  style="height: 48vh;">
+                            <img src="img/parnika.jpeg" alt="Team Image" style="height: 48vh;">
                         </div>
                         <div class="team-text">
                             <h2>Parnika Gupta</h2>
@@ -178,7 +409,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="img/armaan.jpeg" alt="Team Image"  style="height: 48vh;">
+                            <img src="img/armaan.jpeg" alt="Team Image" style="height: 48vh;">
                         </div>
                         <div class="team-text">
                             <h2>Armaan Nanda</h2>
@@ -200,7 +431,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="img/vedant.jpeg" alt="Team Image"  style="height: 48vh;">
+                            <img src="img/vedant.jpeg" alt="Team Image" style="height: 48vh;">
                         </div>
                         <div class="team-text">
                             <h2>Vedant Aggarwal</h2>
@@ -210,7 +441,7 @@
                 </div>
             </div>
 
-            
+
         </div>
     </div>
     <!-- Team End -->
@@ -227,7 +458,7 @@
                 ·
                 <a href="about.html">About</a>
                 ·
-                <a href="gallery prayas.html">Gallery</a>
+                <a href="gallery praayas.html">Gallery</a>
             </p>
 
             <p class="footer-company-name">&copy; SBS Seva</p>
@@ -236,7 +467,7 @@
 
         <div class="footer-center">
             <p style="text-align: center;">All interested students may contact <br>the following email id:</p>
-            
+
             <div>
                 <i class="fa fa-envelope"></i>
                 <p style="text-align: center;"><a href="mailto:sbs.seva2021@gmail.com">sbs.seva2021@gmail.com</a></p>
